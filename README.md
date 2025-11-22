@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## 프로젝트 소개
 
-## Getting Started
+가장 단순한 **풀스택 웹페이지** 예시를 만들었습니다. 하나의 페이지에서 React(프론트엔드)와 Next.js API Route(백엔드)가 어떻게 연결되는지 확인할 수 있습니다. 사용자는 “방명록” 메시지를 작성하고, 서버는 해당 메시지를 저장해 다시 돌려줍니다.
 
-First, run the development server:
+## 코드 구조
+
+| 영역 | 파일 | 역할 |
+| --- | --- | --- |
+| 프론트엔드 | `app/page.tsx` | 입력 폼, 상태 관리, `/api/messages` 호출 |
+| 백엔드 | `app/api/messages/route.ts` | GET/POST 요청 처리, 메모리 배열에 메시지 보관 |
+| 공통 레이아웃 | `app/layout.tsx` | 폰트, 메타데이터, 전역 CSS 연결 |
+
+두 파일(`page.tsx`, `route.ts`)만 집중해서 읽으면 클라이언트 ↔ 서버 흐름을 한 번에 이해할 수 있습니다.
+
+## 실행 방법
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+브라우저에서 [http://localhost:3000](http://localhost:3000)을 열면 방명록 앱을 볼 수 있습니다.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 학습 포인트
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **상태 흐름** – `useState`, `useEffect`, `fetch`를 이용해 입력 → 요청 → 다시 그리기가 어떻게 되는지 확인합니다.  
+2. **API 통신** – `fetch("/api/messages")`가 Next.js 내부 API Route로 연결돼 같은 프로젝트 안에서 백엔드를 흉내냅니다.  
+3. **데이터 형식** – 백엔드는 JSON만 다루며, 간단한 유효성 검사를 통해 오류 응답도 직접 만들어볼 수 있습니다.  
+4. **확장 아이디어** – 파일 저장/DB 연결, 사용자 인증 등으로 자연스럽게 확장할 수 있는 토대가 됩니다.
 
-## Learn More
+## 다음 단계
 
-To learn more about Next.js, take a look at the following resources:
+- 메시지를 파일이나 데이터베이스에 실제로 저장해 보기  
+- WebSocket 또는 Server Actions로 실시간 기능 추가  
+- UI 컴포넌트를 더 쪼개어 재사용성을 높이기  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+필요한 부분만 골라 실험하면서 프론트엔드와 백엔드의 대화를 몸으로 익혀보세요!
