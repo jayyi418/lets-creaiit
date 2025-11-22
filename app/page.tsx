@@ -5,8 +5,10 @@ export default function Home() {
         <h1 className="text-3xl font-bold mb-8">Creai+it</h1>
         <h1 className="text-xl font-bold mb-8">github 협업 실습 출석부</h1>
 
-        <p>이재현</p>
+        <p>이재현 : 저는 리포지토리를 만들어 보았습니닷.<br></br>
+        이재현2 : 저도 clone을 해보았습니닷.</p>
         {/*요기 수정해서 push하기*/}
+
 
 
 
