@@ -9,6 +9,7 @@ export default function Home() {
         이재현2 : 저도 clone을 해보았습니닷.</p>
         <p>전미강: 전미강입니다~!</p>
         <p>임동균 : 미강이 하이~</p>
+        <p>lyzzy.one : 왜 이렇게 적냐 사람이~오바다진짜~</p>
         {/*요기 수정해서 push하기*/}
 
 
