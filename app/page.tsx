@@ -6,9 +6,10 @@ export default function Home() {
         <h1 className="text-xl font-bold mb-8">github 협업 실습 출석부</h1>
 
         <p>이재현 : 저는 리포지토리를 만들어 보았습니닷.<br></br>
-        이재현2 : 저도 clone을 해보았습니닷.</p>
+          이재현2 : 저도 clone을 해보았습니닷.</p>
         <p>전미강: 전미강입니다~!</p>
         <p>임동균 : 미강이 하이~</p>
+        <p>한경민 : 내일이 월요일이라니.. 믿기지 않지만 다들 월요팅</p>
         {/*요기 수정해서 push하기*/}
 
 
